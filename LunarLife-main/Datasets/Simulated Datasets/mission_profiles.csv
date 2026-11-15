@@ -1,0 +1,5 @@
+astronaut_id,mission_name,planned_duration_days,updated_duration_days,extension_days,mission_start_date,mission_status,data_source
+AST001,Demo Mission Alpha,180,270,90,2026-10-01,EXTENDED_SIMULATION,SIMULATED_DEMO_DATA
+AST002,Demo Mission Alpha,180,180,0,2026-10-01,PLANNED_SIMULATION,SIMULATED_DEMO_DATA
+AST003,Demo Mission Beta,180,180,0,2026-10-01,PLANNED_SIMULATION,SIMULATED_DEMO_DATA
+AST004,Demo Mission Beta,180,240,60,2026-10-01,EXTENDED_SIMULATION,SIMULATED_DEMO_DATA

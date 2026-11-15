@@ -1,0 +1,50 @@
+[
+  {
+    "guidance_id": "G001",
+    "hazard_category": "Space radiation",
+    "topic": "Radiation record review",
+    "trigger_example": "Recorded cumulative exposure trend changes",
+    "guidance_text": "Review the recorded exposure trend and follow mission radiation monitoring and crew medical instructions.",
+    "source_type": "DEMO_CONTENT_REQUIRES_REVIEW"
+  },
+  {
+    "guidance_id": "G002",
+    "hazard_category": "Isolation and confinement",
+    "topic": "Mood and stress check-in",
+    "trigger_example": "High stress or low mood across several check-ins",
+    "guidance_text": "Record how you are feeling and use mission-approved wellbeing resources. Contact designated crew medical support if concerns persist or worsen.",
+    "source_type": "DEMO_CONTENT_REQUIRES_REVIEW"
+  },
+  {
+    "guidance_id": "G003",
+    "hazard_category": "Distance from Earth",
+    "topic": "Offline health information",
+    "trigger_example": "Earth communication unavailable",
+    "guidance_text": "Use locally saved, mission-approved reference material. Record observations locally and synchronise them when communication returns.",
+    "source_type": "DEMO_CONTENT_REQUIRES_REVIEW"
+  },
+  {
+    "guidance_id": "G004",
+    "hazard_category": "Gravity fields",
+    "topic": "Exercise and physical conditioning",
+    "trigger_example": "Recorded exercise is below the assigned plan",
+    "guidance_text": "Review the individual exercise plan and record completed activity. Consult the crew medical or exercise specialist before changing the plan.",
+    "source_type": "DEMO_CONTENT_REQUIRES_REVIEW"
+  },
+  {
+    "guidance_id": "G005",
+    "hazard_category": "Hostile and closed environments",
+    "topic": "Cabin environment awareness",
+    "trigger_example": "A cabin reading triggers a configured demo alert",
+    "guidance_text": "Check the reading and sensor status, then follow approved spacecraft environmental-control and crew-notification procedures.",
+    "source_type": "DEMO_CONTENT_REQUIRES_REVIEW"
+  },
+  {
+    "guidance_id": "G006",
+    "hazard_category": "General health monitoring",
+    "topic": "Unusual health pattern",
+    "trigger_example": "Several measurements differ from personal baseline",
+    "guidance_text": "Review readings, repeat measurements when appropriate under mission procedures, record symptoms and contact qualified medical support according to mission protocol.",
+    "source_type": "DEMO_CONTENT_REQUIRES_REVIEW"
+  }
+]

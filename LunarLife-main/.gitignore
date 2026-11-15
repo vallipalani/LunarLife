@@ -1,0 +1,10 @@
+node_modules
+dist
+.DS_Store
+src_previous_backup
+backend/.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+backend/*.db
+backend/*.sqlite3

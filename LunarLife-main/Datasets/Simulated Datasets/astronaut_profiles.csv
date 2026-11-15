@@ -1,0 +1,5 @@
+astronaut_id,display_name,age_years,mission_role,baseline_resting_hr_bpm,baseline_systolic_bp_mmhg,baseline_diastolic_bp_mmhg,baseline_temperature_c,baseline_spo2_percent,baseline_sleep_hours,baseline_stress_score,baseline_mood_score,baseline_exercise_minutes,data_source
+AST001,Commander A,38,Commander,64,116,74,36.7,98,7.5,2,4,110,SIMULATED_DEMO_DATA
+AST002,Specialist B,42,Flight Engineer,68,120,78,36.6,97,7.2,2,4,100,SIMULATED_DEMO_DATA
+AST003,Specialist C,35,Mission Specialist,62,114,72,36.8,98,7.8,1,5,120,SIMULATED_DEMO_DATA
+AST004,Pilot D,40,Pilot,70,122,80,36.7,97,7.0,2,4,105,SIMULATED_DEMO_DATA
