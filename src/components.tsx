@@ -380,6 +380,24 @@ export function Sidebar({ currentPage, onNavigate, isOpen, onClose, astronaut }:
               </div>
             )}
           </div>
+          {/* Adaptive Health Assessment */}
+          <button
+            onClick={() => handleNavClick('adaptive-assessment')}
+            className={`w-full flex items-center px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
+              isItemActive('adaptive-assessment')
+                ? 'bg-sky-50 text-sky-700 border border-sky-100/80'
+                : 'text-slate-600 hover:bg-slate-100/70 hover:text-slate-900'
+            }`}
+          >
+            <Activity
+              className={`w-4 h-4 mr-3 stroke-[2] ${
+                isItemActive('adaptive-assessment')
+                  ? 'text-sky-600'
+                  : 'text-slate-400'
+              }`}
+            />
+            <span>Adaptive Health Assessment</span>
+          </button>
 
           {/* Crew Health - moved here */}
           <button
