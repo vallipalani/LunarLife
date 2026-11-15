@@ -5,7 +5,8 @@ export type PageId =
   | 'health-profile-analytics'
   | 'health-profile-recommendations'
   | 'crew-health'
-  | 'settings';
+  | 'settings'
+  |'adaptive-assessment';
 
 export interface AstronautProfile {
   name: string;
