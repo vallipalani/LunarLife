@@ -16,7 +16,7 @@
 ## Getting Started
 
 ```bash
-# Frontend + AI assistan
+# Frontend + AI assistant
 npm install
 npm run dev
 # Optional: paste an LLM API key in the AI Assistant page to enable online mode.
