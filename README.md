@@ -1,5 +1,5 @@
 # ASTRA HEALTH — Astronaut Health Monitoring System
-### Minimalist, Modern Web-Based Health Telemetry Platform (Frontend Prototype)
+### Minimalist, Modern Web-Based Health Telemetry Platform
 
 **ASTRA HEALTH** is a clean, modern, and minimalist astronaut health monitoring system designed for crew members during long-duration spaceflight missions (e.g., Mission ORION-07, Day 124). It bridges onboard telemetry with personal healthcare management, prioritizing clinical readability, soft calm visuals, and intuitive navigation.
 
@@ -10,6 +10,28 @@
 - **Color Scheme:** Soft Blue (`#0284C7`, `#0EA5E9`, `#F0F7FF`) and Warm White (`#FAFBFD`, `#FFFFFF`).
 - **Visual Style:** Minimalist, uncluttered, plenty of whitespace, clean Inter typography, subtle borders (`border-slate-200/80`), soft shadows (`shadow-subtle`), and moderately rounded corners (`rounded-xl`).
 - **Responsive:** Full cross-device support (Desktop, Tablet, Mobile) with an off-canvas drawer navigation for mobile viewports.
+
+---
+
+## Getting Started
+
+```bash
+# Frontend + AI assistan
+npm install
+npm run dev
+# Optional: paste an LLM API key in the AI Assistant page to enable online mode.
+# Without one, the assistant uses the offline rule-based mode.
+
+# Python recommendation backend
+cd backend
+python -m venv venv
+source venv/bin/activate        # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+uvicorn main:app --reload
+
+# Tests
+npm test
+```
 
 ---
 
@@ -55,31 +77,48 @@
 
 ---
 
-## Compact Code Architecture (12 Application Files)
+## Code Architecture
 
 ```text
-src/
-├── App.tsx                     # Core state (active route, astronaut profile, tasks) & layout
-├── components.tsx              # Shared Sidebar, Header, Card, Badge & MetricCard
-├── types.ts                    # TypeScript interfaces & navigation types
-├── data.ts                     # Mock datasets, initial profile, trends, and assistant responses
-├── index.css                   # Tailwind styling & clean typography
-├── main.tsx                    # React root mount
-└── pages/
-    ├── Dashboard.tsx           # Health overview, 5 metrics, Recharts trends, alerts & tasks
-    ├── AiAssistant.tsx         # Chat interface, prompt chips & clinical responses
-    ├── PersonalHealth.tsx      # Personal records, baselines & editable profile form
-    ├── PredictiveAnalytics.tsx # Overview cards, 3 Recharts trends & comparison table
-    ├── HealthRecommendations.tsx # 4-category recommendation grid & follow-up tasks
-    └── Settings.tsx            # Mission configuration, sensor pairings & reset demo data
+LunarLife/
+├── src/                        
+│   ├── App.tsx                 # Core state, routing, layout
+│   ├── components.tsx          # Shared UI components
+│   ├── types.ts, data.ts       # Types and demo data
+│   ├── pages/                  # Dashboard, AI Assistant, Personal Health,
+│   │                           # Predictive Analytics, Recommendations, Settings
+│   ├── components/             # Reusable UI components
+│   ├── hooks/                  # Custom React hooks
+│   ├── services/               # Connects the frontend to the engines/backend
+│   ├── analytics/              # Predictive analytics logic
+│   ├── assessment/             # Adaptive health assessment
+│   └── assistant/              # AI assistant engine
+│       ├── aiClient.ts         # LLM client
+│       ├── engine.ts           # Assistant logic
+│       ├── contextBuilder.ts   # Builds context from health records
+│       ├── knowledgeBase.ts    # Rule-based knowledge
+│       ├── redFlags.ts         # Red-flag symptom detection
+│       ├── systemPrompt.ts     # LLM system prompt
+│       ├── loadRecords.ts      # Loads astronaut records
+│       └── scenarios.ts        # Test/demo scenarios
+├── backend/                    # Python recommendation engine
+│   ├── main.py
+│   ├── models.py
+│   ├── recommendation_engine.py
+│   ├── requirements.txt
+│   └── tests/
+├── Datasets/
+│   ├── NASA Real Data/         # NASA LSDA LSDS-8 research datasets
+│   └── Simulated Datasets/     # Simulated astronaut data for the demo
+├── index.html, vite.config.ts, tailwind.config.js, tsconfig.json
+└── run-tests.mjs
 ```
 
 ---
 
 ##  Technology Stack
 
-- **Framework:** React 18 + TypeScript + Vite
-- **Styling:** Tailwind CSS (Soft Blue & Warm White palette)
+- **Tech Stack:** React 18 + TypeScript + Vite, Tailwind CSS, Recharts, Node.js, Python
+- **Styling:** Tailwind CSS
 - **Data Visualization:** Recharts
 - **Iconography:** Lucide React
-- **Status:** Frontend-Only prototype (zero external APIs, backend, or machine learning models)
